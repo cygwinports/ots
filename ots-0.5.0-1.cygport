@@ -1,0 +1,23 @@
+inherit gnome2
+
+DESCRIPTION="Open Text Summarizer"
+HOMEPAGE="http://libots.sourceforge.net/"
+SRC_URI="mirror://sourceforge/libots/${P}.tar.gz"
+
+PKG_NAMES="${PN} lib${PN}1 lib${PN}1-devel"
+PKG_HINTS="setup lib devel"
+PKG_CONTENTS[0]='usr/bin/*.exe usr/share/doc/'
+PKG_CONTENTS[1]="usr/bin/*.dll usr/share/${PN}/"
+PKG_CONTENTS[2]='usr/include/ usr/lib/'
+
+# gtk-doc is broken
+CYGCONF_ARGS="--disable-gtk-doc"
+# WANT_AUTOMAKE="1.9"  # for gtk-doc
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	docinto examples
+	dodoc ${S}/articles/*.txt
+}
