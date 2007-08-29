@@ -18,7 +18,7 @@ Runtime requirements:
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.24-1
+  cygwin-1.5.24-2
   autoconf2.5-2.61-1
   automake1.4-1.4p6-4
   binutils-20060817-1
