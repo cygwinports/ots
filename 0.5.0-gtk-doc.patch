@@ -1,0 +1,11 @@
+This package's gtk-doc is seriously broken.
+
+--- origsrc/ots-0.5.0/Makefile.am	2007-04-08 11:15:44.000000000 -0500
++++ src/ots-0.5.0/Makefile.am	2009-04-27 22:19:12.560875000 -0500
+@@ -1,5 +1,5 @@
+ 
+-SUBDIRS=src dic doc
++SUBDIRS=src dic # doc
+ DIST_SUBDIRS=src articles dic doc
+ 
+ pkgconfigdir = $(libdir)/pkgconfig

@@ -12,22 +12,22 @@ the important sentences are highlighted. The program is multi lingual
 and works with UTF-8 encoding.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  glib2-2.12.13-1
-  libxml2-2.6.29-1
+  cygwin-1.7.0-45
+  libgcc1-4.3.2-2
+  libglib2.0_0-2.20.1-1
+  libxml2-2.7.3-10
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.24-2
-  autoconf2.5-2.61-1
-  automake1.4-1.4p6-4
-  binutils-20060817-1
-  cygport-0.3.5-1
-  gawk-3.1.5-4
-  gcc-core-3.4.4-3
-  libtool1.5-1.5.23a-2
-  make-3.81-1
-  pkg-config-0.21-1
+  autoconf2.5-2.63-10
+  automake1.4-1.4p6-10
+  binutils-20080624-2
+  cygport-0.9.6-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  libtool-2.2.7a-12
+  make-3.81-2
+  pkg-config-0.23b-10
   sed-4.1.5-2
 
 Canonical website:
@@ -46,8 +46,8 @@ Build instructions:
   cygport ./ots-0.5.0-X.cygport all
 
 This will create:
-  /usr/src/libots1-0.5.0-X.tar.bz2
   /usr/src/libots1-devel-0.5.0-X.tar.bz2
+  /usr/src/libots1_0-0.5.0-X.tar.bz2
   /usr/src/ots-0.5.0-X-src.tar.bz2
   /usr/src/ots-0.5.0-X.tar.bz2
 
@@ -55,30 +55,29 @@ This will create:
 
 Files included in the binary packages:
 
+(ots)
   /usr/bin/ots.exe
-  /usr/share/doc/Cygwin/ots-0.5.0.README
-  /usr/share/doc/ots-0.5.0/AUTHORS
-  /usr/share/doc/ots-0.5.0/BUGS
-  /usr/share/doc/ots-0.5.0/COPYING
-  /usr/share/doc/ots-0.5.0/ChangeLog
-  /usr/share/doc/ots-0.5.0/HACKING
-  /usr/share/doc/ots-0.5.0/INSTALL
-  /usr/share/doc/ots-0.5.0/NEWS
-  /usr/share/doc/ots-0.5.0/README
-  /usr/share/doc/ots-0.5.0/TODO
-  /usr/share/doc/ots-0.5.0/examples/art.hebrew.txt
-  /usr/share/doc/ots-0.5.0/examples/guardian1.txt
-  /usr/share/doc/ots-0.5.0/examples/gulag.txt
-  /usr/share/doc/ots-0.5.0/examples/letter.txt
-  /usr/share/doc/ots-0.5.0/examples/linus1.txt
-  /usr/share/doc/ots-0.5.0/examples/ori.hebrew.txt
-  /usr/share/doc/ots-0.5.0/examples/sacbee1.txt
-  /usr/share/doc/ots-0.5.0/examples/sacbee2.txt
-  /usr/share/doc/ots-0.5.0/examples/washingtonpost1.txt
-  /usr/share/doc/ots-0.5.0/examples/washingtonpost2.txt
-  /usr/share/doc/ots-0.5.0/examples/ynet.hebrew.txt
+  /usr/share/doc/ots/AUTHORS
+  /usr/share/doc/ots/BUGS
+  /usr/share/doc/ots/COPYING
+  /usr/share/doc/ots/ChangeLog
+  /usr/share/doc/ots/HACKING
+  /usr/share/doc/ots/NEWS
+  /usr/share/doc/ots/README
+  /usr/share/doc/ots/TODO
+  /usr/share/doc/ots/examples/art.hebrew.txt
+  /usr/share/doc/ots/examples/guardian1.txt
+  /usr/share/doc/ots/examples/gulag.txt
+  /usr/share/doc/ots/examples/letter.txt
+  /usr/share/doc/ots/examples/linus1.txt
+  /usr/share/doc/ots/examples/ori.hebrew.txt
+  /usr/share/doc/ots/examples/sacbee1.txt
+  /usr/share/doc/ots/examples/sacbee2.txt
+  /usr/share/doc/ots/examples/washingtonpost1.txt
+  /usr/share/doc/ots/examples/washingtonpost2.txt
+  /usr/share/doc/ots/examples/ynet.hebrew.txt
 
-(libots1)
+(libots1_0)
   /usr/bin/cygots-1-0.dll
   /usr/share/ots/bg.xml
   /usr/share/ots/ca.xml
@@ -128,8 +127,8 @@ Files included in the binary packages:
 
 Port Notes:
 
------ version 0.5.0-1 -----
-Initial release for Cygwin.
+----- version 0.5.0-10 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:

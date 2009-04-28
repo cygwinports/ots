@@ -1,0 +1,25 @@
+inherit gnome2
+
+DESCRIPTION="Open Text Summarizer"
+HOMEPAGE="http://libots.sourceforge.net/"
+SRC_URI="mirror://sourceforge/libots/${P}.tar.gz"
+
+PATCH_URI="0.5.0-gtk-doc.patch
+           0.5.0-parallel-make.patch
+           0.5.0-vpath.patch"
+
+PKG_NAMES="${PN} lib${PN}1_0 lib${PN}1-devel"
+ots_CONTENTS='usr/bin/*.exe usr/share/doc/'
+libots1_0_CONTENTS="usr/bin/cygots-1-0.dll usr/share/${PN}/"
+libots1_devel_CONTENTS='usr/include/ usr/lib/'
+
+# gtk-doc is broken
+CYGCONF_ARGS="--disable-gtk-doc"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	docinto examples
+	dodoc ${S}/articles/*.txt
+}

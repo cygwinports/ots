@@ -1,6 +1,7 @@
 category: Text
-requires: cygwin glib2 libots1
-sdesc: "Open Text Summarizer (command line frontend)"
+requires: cygwin libots1_0 libglib2.0-devel libxml2-devel
+external-source: ots
+sdesc: "Open Text Summarizer (development)"
 ldesc: "The Open Text Summarizer is an open source tool for summarizing 
 texts. The program reads a text and decides which sentences are 
 important and which are not.

@@ -1,0 +1,11 @@
+--- origsrc/ots-0.5.0/src/Makefile.am	2007-04-08 11:21:51.000000000 -0500
++++ src/ots-0.5.0/src/Makefile.am	2009-04-27 22:08:57.639000000 -0500
+@@ -16,7 +16,7 @@ endif
+ 
+ DEFS = @DEFS@ -DVERSION=\"@OTS_VERSION@\" -DDICTIONARY_DIR=\"$(pkgdatadir)/\"
+ 
+-INCLUDES = -I$(top_srcdir) $(OTS_CFLAGS) $(ANSI_CFLAGS)
++INCLUDES = -I$(top_builddir) $(OTS_CFLAGS) $(ANSI_CFLAGS)
+ 
+ lib_LTLIBRARIES = libots-1.la
+ 
