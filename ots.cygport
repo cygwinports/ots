@@ -1,0 +1,36 @@
+inherit gnome2
+
+NAME="ots"
+VERSION=0.5.0
+RELEASE=10
+CATEGORY="Libs"
+SUMMARY="Open Text Summarizer"
+DESCRIPTION="The Open Text Summarizer is an open source tool for summarizing
+texts. The program reads a text and decides which sentences are important and
+which are not.  OTS is both a library and a command line tool. Word processors
+such as AbiWord and KWord can link to the library and summarize documents while
+the command line tool lets you summarize text on the console."
+HOMEPAGE="http://libots.sourceforge.net/"
+SRC_URI="mirror://sourceforge/libots/ots-${VERSION}.tar.gz"
+PATCH_URI="
+	0.5.0-gtk-doc.patch
+	0.5.0-parallel-make.patch
+	0.5.0-vpath.patch
+"
+
+PKG_NAMES="ots libots1_0 libots1-devel"
+ots_CATEGORY="Text"
+ots_CONTENTS='usr/bin/*.exe usr/share/doc/'
+libots1_0_CONTENTS="usr/bin/cygots-1-0.dll usr/share/ots/"
+libots1_devel_CONTENTS='usr/include/ usr/lib/'
+
+# gtk-doc is broken
+CYGCONF_ARGS="--disable-gtk-doc"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	docinto examples
+	dodoc ${S}/articles/*.txt
+}
